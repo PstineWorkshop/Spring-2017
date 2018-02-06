@@ -3,6 +3,9 @@ body{
 	/*background-color:#778899;*/
 
 }
+#footText{
+	color:white;
+}
 .texB{
  	resize: none;
  	width: 400px;
