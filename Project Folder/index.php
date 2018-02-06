@@ -6,7 +6,8 @@ $page_title = 'Welcome to this Site!';
 ?>
 <!-- SLIDESHOW -->
   <!-- Full Page Image Background Carousel Header -->
-    <header id="myCarousel" class="carousel slide">
+    <div class="container">
+     <header id="myCarousel" class="carousel slide">
         <!-- Wrapper for Slides -->
         <div class="carousel-inner">
             <div class="item active" > <!--First IMAGES-->
@@ -88,6 +89,7 @@ $page_title = 'Welcome to this Site!';
     
   
     </header> 
+</div>
 <!-- END OF SLIDESHOW -->
 
 
