@@ -28,11 +28,7 @@ if (isset($_POST['submitted'])) {
    //         $wf = mysqli_real_escape_string($dbc, trim($_POST['walkthrough_file']));
    // }
    
-    
-    
-
-    
-    if (empty($errors)) {//no errors
+  if (empty($errors)) {//no errors
 			$gi = ($_POST['game_id']);
             
 
@@ -65,14 +61,8 @@ if (isset($_POST['submitted'])) {
                                
                    }
                 }
-                  
-
-                   
-                   
                 // Print a message:
-        
-
-        } else { // If it did not run OK.
+       } else { // If it did not run OK.
 
                 // Public message:
                 echo '<h1>System Error</h1>
@@ -144,12 +134,6 @@ mysqli_close($dbc); // Close the database connection.
     <h1>ADD Walkthrough</h1>
 </div>
 <form class="form-signin" role="form" action="addWalkthrough.php" method="post">
-    
-	
-
-   
-    
-
     <p>Pick a game: <select name="game_id" >
     <?php
     foreach ($types as $type) {
@@ -159,17 +143,13 @@ mysqli_close($dbc); // Close the database connection.
         </select></p>
     
 
-    <p>Walthrough Name: <input type="normal" class="form-control" placeholder="best walkthrough" required autofocus name="walkthrough_name" maxlength="40" value="<?php if (isset($_POST['walkthrough_name'])) echo $_POST['walkthrough_name']; ?>" /></p>
+    <p>Walkthrough Name: <input type="normal" class="form-control" placeholder="best walkthrough" required autofocus name="walkthrough_name" maxlength="40" value="<?php if (isset($_POST['walkthrough_name'])) echo $_POST['walkthrough_name']; ?>" /></p>
     
-    <p>Walthrough Type: <input type="normal" class="form-control" placeholder="General or In Depth" required name="walkthrough_type" maxlength="40" value="<?php if (isset($_POST['walkthrough_type'])) echo $_POST['walkthrough_type']; ?>" /></p>
+    <p>Walkthrough Type: <input type="normal" class="form-control" placeholder="General or In Depth" required name="walkthrough_type" maxlength="40" value="<?php if (isset($_POST['walkthrough_type'])) echo $_POST['walkthrough_type']; ?>" /></p>
     
     <p> Walkthrough File:<textarea class='texB' name='message'></textarea></br></p>
 
    <!-- <p>Walkthrough File: <input type="text" style ="height:100px;font-size:14pt;"class="form-control" placeholder="Write Walkthrough here" required name="walkthrough_file"  /></p>-->
-    
-    
-
-    
     <p><button type="submit" name="submit" class="btn btn-sm btn-primary" />Submit</button></p>
     <input type="hidden" name="submitted" value="TRUE" />
     
